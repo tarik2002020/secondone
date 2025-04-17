@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+}
+html {
+  font-size: 10px;
+}
+@font-face {
+  font-family: season;
+  src: url(ress/fonts/Fontspring-DEMO-theseasons-reg.otf);
+}
+@font-face {
+  font-family: garet;
+  src: url(ress/fonts/Garet-Book.ttf);
+}
+
+.container {
+  display: inline-flex;
+  width: 100%;
+  height: 100vh;
+}
+.left {
+  width: 50%;
+  background-color: #222831;
+  position: relative;
+}
+.right {
+  width: 50%;
+  background-image: url(ress/img.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+.box {
+  position: absolute;
+  width: 60%;
+  top: 10%;
+  left: 15%;
+}
+.name {
+  font-family: garet;
+  color: #dbe5e3;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 5px;
+}
+.main-head {
+  font-family: season;
+  color: #bf9745;
+  font-weight: 300;
+  font-size: 5.5rem;
+  width: 33rem;
+  margin-top: 7rem;
+}
+.para {
+  color: #dbe5e3b8;
+  font-family: garet;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+.contact {
+  color: #bf9745;
+  font-family: garet;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  width: fit-content;
+  padding: 5px 20px;
+  border: #bf9745 1px solid;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .container {
+    position: relative;
+  }
+  .right {
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+  }
+  .left {
+    width: 100%;
+    z-index: 1;
+    background-color: none;
+    background-image: url(ress/img.jpg);
+    background-size: cover;
+    background-position: 60%;
+  }
+  .bg-im {
+    width: 100%;
+    height: 100vh;
+    background-color: #222831bb;
+  }
+  .main-head {
+    font-size: 4rem;
+    width: 100%;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .box {
+    top: -20%;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+  }
+  .contact {
+    margin: 50px auto;
+    font-size: 1.5rem;
+    border-radius: 3px;
+  }
+}
